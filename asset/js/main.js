@@ -9,6 +9,11 @@ Mail Bonus
 
  //steps
  //Ask user'email
+ const whitelist = [
+    'email@gmail.com',
+    'email@live.it',
+    'email@libero.it'
+]
  const buttonEmail = document.getElementById('button_email')
  buttonEmail.addEventListener ('click', function () {
     const userEmail = document.getElementById("user_email").value
