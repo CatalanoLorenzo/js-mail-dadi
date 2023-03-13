@@ -21,12 +21,18 @@ buttonEmail.addEventListener('click', function () {
     const result = document.querySelector('p');
     console.log(userEmail);
     //check if user'email is into whaitlist
+    let denner
     
     for (let i = 0; i < whitelist.length; i++) {
-
         if (whitelist[i] == userEmail) {
             console.log('email presente puoi accedere');
+            i = whitelist.length
             result.innerHTML = `email presente puoi accedere`;
+        }else {
+            denner = 'email non presente non puoi accedere'
+            i = whitelist.length
+            console.log('email non presente puoi accedere');
+            result.innerHTML = denner ;
         }
     }
 })
