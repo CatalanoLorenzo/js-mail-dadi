@@ -20,21 +20,21 @@ buttonEmail.addEventListener('click', function () {
     const emailValue = userEmail
     const result = document.querySelector('p');
     console.log(userEmail);
+    let denner = ""
     //check if user'email is into whaitlist
-    let denner
-
     for (let i = 0; i < whitelist.length; i++) {
         if (whitelist[i] == userEmail) {
             //print a message for the outcome of the check
-            console.log('email presente puoi accedere');
-            i = whitelist.length
-            result.innerHTML = `email presente puoi accedere`;
+            let access= ""
+            access = 'email presente puoi accedere'
+            console.log(access);
+            result.innerHTML = access;
         } else {
             denner = 'email non presente non puoi accedere'
-            console.log('email non presente non puoi accedere');
-            result.innerHTML = denner;
         }
     }
+    result.innerHTML = denner;
+    console.log(denner);
 })
 /* Generare un numero random da 1 a 6, sia per il giocatore sia per
  il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
