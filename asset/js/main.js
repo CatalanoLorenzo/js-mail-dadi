@@ -30,8 +30,7 @@ buttonEmail.addEventListener('click', function () {
             result.innerHTML = `email presente puoi accedere`;
         }else {
             denner = 'email non presente non puoi accedere'
-            i = whitelist.length
-            console.log('email non presente puoi accedere');
+            console.log('email non presente non puoi accedere');
             result.innerHTML = denner ;
         }
     }
