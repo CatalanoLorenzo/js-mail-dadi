@@ -42,16 +42,26 @@ buttonEmail.addEventListener('click', function () {
 
 
 //generete  two number random
-let numberCPU = Math.floor(Math.random() * 6) + 1;
-let number1P = Math.floor(Math.random() * 6) + 1;
-
-console.log(`numero 1 Player :${number1P}`)
-console.log(`numero CPU :${numberCPU}`)
+const cardNumberCPU = document.getElementById ('computer');
+const cardNumberPlayer = document.getElementById ('player');
+const cardResult = document.getElementById ('game_result');
+const buttonplay = document.getElementById('play')
+buttonplay.addEventListener('click', function(){
+    let numberCPU = Math.floor(Math.random() * 6) + 1;
+    let number1P = Math.floor(Math.random() * 6) + 1;
+console.log(`numero 1 Player :${number1P}`);
+cardNumberPlayer.innerHTML = number1P;
+console.log(`numero CPU :${numberCPU}`);
+cardNumberCPU.innerHTML = numberCPU;
 //check who have number more for win
 if (number1P > numberCPU) {
-    console.log("hai vinto")
+    console.log("hai vinto");
+    cardResult.innerHTML = "hai vinto";
 } else if (number1P < numberCPU) {
-    console.log("hai perso") 
+    console.log("hai perso") ;
+    cardResult.innerHTML = "hai perso";
 } else {
     console.log("hai pareggiato");
+    cardResult.innerHTML = "hai pareggiato";
 }
+})
