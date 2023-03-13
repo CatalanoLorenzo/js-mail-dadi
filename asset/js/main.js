@@ -25,6 +25,7 @@ buttonEmail.addEventListener('click', function () {
     
     for (let i = 0; i < whitelist.length; i++) {
         if (whitelist[i] == userEmail) {
+            //print a message for the outcome of the check
             console.log('email presente puoi accedere');
             i = whitelist.length
             result.innerHTML = `email presente puoi accedere`;
@@ -35,4 +36,22 @@ buttonEmail.addEventListener('click', function () {
         }
     }
 })
-//print a message for the outcome of the check
+/* Generare un numero random da 1 a 6, sia per il giocatore sia per
+ il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+ */
+
+
+//generete  two number random
+let numberCPU = Math.floor(Math.random() * 6) + 1;
+let number1P = Math.floor(Math.random() * 6) + 1;
+
+console.log(`numero 1 Player :${number1P}`)
+console.log(`numero CPU :${numberCPU}`)
+//check who have number more for win
+if (number1P > numberCPU) {
+    console.log("hai vinto")
+} else if (number1P < numberCPU) {
+    console.log("hai perso") 
+} else {
+    console.log("hai pareggiato");
+}
