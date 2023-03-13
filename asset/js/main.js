@@ -7,19 +7,27 @@ Mail Bonus
  e poi mostriamo i risultati in pagina. */
 
 
- //steps
- //Ask user'email
- const whitelist = [
+//steps
+//Ask user'email
+const whitelist = [
     'email@gmail.com',
     'email@live.it',
     'email@libero.it'
 ]
- const buttonEmail = document.getElementById('button_email')
- buttonEmail.addEventListener ('click', function () {
+const buttonEmail = document.getElementById('button_email')
+buttonEmail.addEventListener('click', function () {
     const userEmail = document.getElementById("user_email").value
     const emailValue = userEmail
+    const result = document.querySelector('p');
     console.log(userEmail);
-})
- //check if user'email is into whaitlist
+    //check if user'email is into whaitlist
+    
+    for (let i = 0; i < whitelist.length; i++) {
 
+        if (whitelist[i] == userEmail) {
+            console.log('email presente puoi accedere');
+            result.innerHTML = `email presente puoi accedere`;
+        }
+    }
+})
 //print a message for the outcome of the check
